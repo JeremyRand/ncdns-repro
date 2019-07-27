@@ -56,7 +56,7 @@ cd /var/tmp/dist
   # Build as library
   [% c('tar', {
     tar_src => [ 'gopath' ],
-    tar_args => '-czf ' _ dest_dir _ '/' _ c('filename'),
+    tar_args => '-cJf ' _ dest_dir _ '/' _ c('filename'),
   }) %]
 [% ELSE %]
   # Build as executable
@@ -69,6 +69,6 @@ cd /var/tmp/dist
   cd $distdir
   [% c('tar', {
      tar_src   => [ '.' ],
-     tar_args  => '-czf ' _ dest_dir _ '/' _ c('filename'),
+     tar_args  => '-cJf ' _ dest_dir _ '/' _ c('filename'),
    }) %]
 [% END %]

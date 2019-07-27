@@ -4,7 +4,7 @@ git_url: https://github.com/namecoin/ncdns.git
 # it's in a tagged release, we'll go back to using a version tag here.
 #git_hash: 'v[% c("version") %]'
 git_hash: '4ea036742bd5b10a7b56765355dcc88724632f32'
-filename: '[% project %]-[% c("version") %]-[% c("var/osname") %]-[% c("var/build_id") %].tar.gz'
+filename: '[% project %]-[% c("version") %]-[% c("var/osname") %]-[% c("var/build_id") %].tar.xz'
 
 var:
   container:
