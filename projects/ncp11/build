@@ -31,8 +31,9 @@ mv $GOPATH/src/github.com/namecoin/ncp11-[% c('version') %] $GOPATH/src/github.c
 
 # TODO: replace $TRIMPATH in -gcflags and -asmflags with -trimpath once we
 # upgrade to Go 1.13.x
+# TODO: remove -buildid in ldflags once we upgrade to Go 1.13.3+
 TRIMPATH="all=\"-trimpath=${GOPATH}/src\""
-go install "-gcflags=$TRIMPATH" "-asmflags=$TRIMPATH" -ldflags '-s' -buildmode c-shared github.com/namecoin/ncp11
+go install "-gcflags=$TRIMPATH" "-asmflags=$TRIMPATH" -ldflags '-s -buildid=' -buildmode c-shared github.com/namecoin/ncp11
 
 #mkdir -p /var/tmp/build
 #tar -C /var/tmp/build -xf [% project %]-[% c('version') %].tar.gz
